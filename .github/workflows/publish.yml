@@ -1,7 +1,7 @@
 name: publish
 
 on:
-  # Trigger the workflow on push to main branch
+  # Trigger the workflow on push to main/master branch
   push:
     branches:
       - master
@@ -35,7 +35,7 @@ jobs:
           pip install jupyter
           pip install nbconvert
       # Set notebook anme
-      - name: get config file
+      - name: Get properties from the config file
         id: config_file
         uses: notiz-dev/github-action-json-property@release
         with: 
